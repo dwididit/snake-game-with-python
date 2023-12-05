@@ -1,5 +1,4 @@
 # Welcome to snake game. Created by Dwi Didit Prasetiyo
-
 from turtle import Screen
 import time
 #import snake class
