@@ -1,0 +1,119 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Welcome to snake game. Created by Dwi Didit Prasetiyo\n\nfrom turtle import Screen\nimport time\n#import snake class\nfrom snake import Snake\nfrom food import Food\nfrom scoreboard import Scoreboard\n\n#create a screen\nscreen = Screen()\nscreen.setup(width=600, height=600)\nscreen.bgcolor(\"black\")\nscreen.title(\"Snake Game\")\nscreen.tracer(0)\n\n#create snake class\nsnake = Snake()\n\n# control the snake\nscreen.listen()\nscreen.onkey(snake.left, \"Left\")\nscreen.onkey(snake.right, \"Right\")\nscreen.onkey(snake.up, \"Up\")\nscreen.onkey(snake.down, \"Down\")\n\n#create a food\nfood = Food()\n\n#create a scoreboard\nscoreboard = Scoreboard()\n\n\n#move the snake\ngame_is_on = True\nwhile game_is_on:\n    screen.update()\n    time.sleep(0.1)\n    snake.move()\n    #detect collision with food\n    if snake.head.distance(food) < 15:\n        food.refresh()\n        snake.extend()\n        scoreboard.increase_score()\n        if scoreboard.score == 30:\n            game_is_on = False\n            scoreboard.win()\n\n\n    #detect collision with wall\n    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor()< -280:\n        scoreboard.game_over()\n\n    #detect collision with tail\n    for segment in snake.segments[1:]:\n        if snake.head.distance(segment) < 10:\n            scoreboard.game_over()\n\n\n\n\n\n\n\n# exit on space bar\nscreen.exitonclick()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
++++ b/main.py	(date 1701781198634)
+@@ -56,12 +56,6 @@
+         if snake.head.distance(segment) < 10:
+             scoreboard.game_over()
+ 
+-
+-
+-
+-
+-
+-
+ # exit on space bar
+ screen.exitonclick()
+ 
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
++++ /dev/null	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/snake-game-with-python.iml" filepath="$PROJECT_DIR$/.idea/snake-game-with-python.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
++++ /dev/null	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/profiles_settings.xml	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
++++ /dev/null	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
+@@ -1,6 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <settings>
+-    <option name="USE_PROJECT_PROFILE" value="false" />
+-    <version value="1.0" />
+-  </settings>
+-</component>
+\ No newline at end of file
+Index: .idea/snake-game-with-python.iml
+===================================================================
+diff --git a/.idea/snake-game-with-python.iml b/.idea/snake-game-with-python.iml
+deleted file mode 100644
+--- a/.idea/snake-game-with-python.iml	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
++++ /dev/null	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="PYTHON_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$">
+-      <excludeFolder url="file://$MODULE_DIR$/venv" />
+-    </content>
+-    <orderEntry type="jdk" jdkName="Python 3.12 (snake-game-with-python)" jdkType="Python SDK" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
++++ /dev/null	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (snake-game-with-python)\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 03f866dcb2537c16353ca9db9158447a32f859b3)
++++ b/.idea/misc.xml	(date 1701781134803)
+@@ -1,4 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (snake-game-with-python)" project-jdk-type="Python SDK" />
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12 (snake-game-with-python)" />
++  </component>
+ </project>
+\ No newline at end of file

@@ -56,12 +56,6 @@ while game_is_on:
         if snake.head.distance(segment) < 10:
             scoreboard.game_over()
 
-
-
-
-
-
-
 # exit on space bar
 screen.exitonclick()
 
