@@ -9,7 +9,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -44,8 +43,8 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -59,6 +58,7 @@
       <updated>1701780587532</updated>
       <workItem from="1701780588709" duration="237000" />
       <workItem from="1701780879936" duration="255000" />
+      <workItem from="1701781169005" duration="259000" />
     </task>
     <task id="LOCAL-00001" summary="Adding file to GitHub">
       <option name="closed" value="true" />
@@ -100,7 +100,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701781096942</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Adding file to GitHub">
+      <option name="closed" value="true" />
+      <created>1701781288610</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701781288610</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding file to GitHub">
+      <option name="closed" value="true" />
+      <created>1701781352623</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701781352623</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +135,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Change code" />
     <MESSAGE value="Adding file to GitHub" />
     <option name="LAST_COMMIT_MESSAGE" value="Adding file to GitHub" />
   </component>
